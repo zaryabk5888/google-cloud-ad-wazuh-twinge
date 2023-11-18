@@ -60,7 +60,19 @@ Create a user.
 
 ![](https://i.imgur.com/8qwQ9fO.png)
 
-Now lets assign him to be admin using predefined objects. This will allow this user to log in from anywhere into the domain controller.
+Now lets assign him to be admin using predefined objects. This will allow this user to log in from anywhere into the domain controller. Then try logging into it.
+
+![](https://i.imgur.com/aqXy84p.png)
+
+## ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Now Deploy Wazuh Siem
+
+Create a user.
+
+![](https://i.imgur.com/8qwQ9fO.png)
+
+Now lets assign him to be admin using predefined objects. This will allow this user to log in from anywhere into the domain controller. Then try logging into it.
 
 ![](https://i.imgur.com/aqXy84p.png)
 
