@@ -66,13 +66,28 @@ Now lets assign him to be admin using predefined objects. This will allow this u
 
 ## ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Now Deploy Wazuh Siem
+## Now Deploy Wazuh SIEM
 
-Create a user.
+Create a new ubuntu instance on google cloud with this code this code on google cloud cli.
 
-![](https://i.imgur.com/8qwQ9fO.png)
+```bash
+gcloud compute instances create wazuhserver --project=even-timing-396709 --zone=us-central1-a --machine-type=e2-medium --network-interface=network-tier=PREMIUM,stack-type=IPV4_ONLY,subnet=default --maintenance-policy=MIGRATE --provisioning-model=STANDARD --service-account=22420940236-compute@developer.gserviceaccount.com --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --create-disk=auto-delete=yes,boot=yes,device-name=wazuh-server,image=projects/ubuntu-os-cloud/global/images/ubuntu-2004-focal-v20231101,mode=rw,size=20,type=projects/even-timing-396709/zones/us-central1-a/diskTypes/pd-balanced --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring --labels=goog-ec-src=vm_add-gcloud --reservation-affinity=any
+````
 
-Now lets assign him to be admin using predefined objects. This will allow this user to log in from anywhere into the domain controller. Then try logging into it.
+connect to the ubuntu server and run this code.
 
-![](https://i.imgur.com/aqXy84p.png)
+```bash
+curl -sO https://packages.wazuh.com/4.6/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
+```
+
+once done installing it will give an output with username and password ( Note : Save It )
+```bash
+sudo tar -O -xvf wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt
+```
+![](https://i.imgur.com/s8uNtcU.png)
+
+
+## Important Note ( Since whenever the wazuh server instance is stopped the public ip address of it will change and wazuh server ip will have to be changed manually in its config file so to fix this we will deploy TWINGATE which will not only provide a secure connection but also save you from the trouble of manually changing ip )
+
+
 
