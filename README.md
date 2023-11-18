@@ -2,6 +2,9 @@
 
 This project automates the setup and configuration of Active Directory on Google Cloud Platform (GCP), integrates it with other instances, deploys the Wazuh SIEM for monitoring, and implements secure remote connections through Twingate. The end goal is to create a robust and secure environment for managing and monitoring instances in a cloud-based infrastructure.
 
+## Diagram
+![System Architecture](https://i.imgur.com/HXv6h43.png)
+
 ## Prerequisites
 
 * Google Cloud Platform (GCP) account with appropriate permissions.
