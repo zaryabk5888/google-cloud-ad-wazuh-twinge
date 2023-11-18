@@ -39,3 +39,22 @@ Now Deploy a connector. This will connect the remote resource and our host.
 
 ![](https://i.imgur.com/0rZ73hF.png)
 
+Generate token, then specify zone below and copy the command and run it on google cloud cli. It will automatically create a connector. Once its done now setup resource.
+
+Give it a name and enter the private ip address of the wazuh server
+![](https://i.imgur.com/1YGiyYn.png)
+
+Now enable traffic to it
+
+![](https://i.imgur.com/jpmIYv6.png)
+
+Now install twingate client on the device from which you wish to access the wazuh server
+
+![](https://www.twingate.com/download)
+
+Now after that login into it and try accessing the wazuh server by using the private ip on the browser
+
+![](https://i.imgur.com/Pg3HdUa.png)
+
+
+## For Wazuh configuration and usage check wazuh.md in repo
