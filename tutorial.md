@@ -87,7 +87,10 @@ sudo tar -O -xvf wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt
 ![](https://i.imgur.com/s8uNtcU.png)
 
 
-## Important Note ( Since whenever the wazuh server instance is stopped the public ip address of it will change and wazuh server ip will have to be changed manually in its config file so to fix this we will deploy TWINGATE which will not only provide a secure connection but also save you from the trouble of manually changing ip )
+## Important Note ( Check the twingate tutorial in the repo )
+
+Since whenever the Wazuh server instance is stopped, the public IP address of it will change, and the Wazuh server IP will have to be changed manually in its config file. To fix this, we will deploy TWINGATE, which will not only provide a secure connection but also save you from the trouble of manually changing the IP.
+
 
 
 
