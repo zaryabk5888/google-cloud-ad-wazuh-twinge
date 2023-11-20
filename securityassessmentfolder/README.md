@@ -1,3 +1,7 @@
 # Applying policies through Security Assessment Configuration report and fixing issues
+Before fixing some issues
+![](https://i.imgur.com/9DjAmGn.png)
 
-27003 Ensure 'Minimum password length' is set to '14 or more character(s)'. Command: net.exe accounts
+After fixing some issues following the remedition 
+![](https://i.imgur.com/QzFSIoy.png)
+
